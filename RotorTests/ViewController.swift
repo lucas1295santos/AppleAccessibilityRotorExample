@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var rotorPropertyValueLabel: UILabel!
-    @IBOutlet weak var valueSlider: UISlider!
     
     private var rotorPropertyValue: Int = 50
     var customRotor: [UIAccessibilityCustomRotor]?
@@ -31,9 +30,9 @@ class ViewController: UIViewController {
             }
             
             self.rotorPropertyValueLabel.text = String(self.rotorPropertyValue)
-            predicate
-                        
-            return UIAccessibilityCustomRotorItemResult.init(targetElement: self.view , targetRange: nil)
+            
+            
+            return UIAccessibilityCustomRotorItemResult.init(targetElement: self.rotorPropertyValueLabel , targetRange: nil)
         }
         
         self.accessibilityCustomRotors = [propertyRotorOption]
