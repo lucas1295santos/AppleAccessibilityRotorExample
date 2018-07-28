@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		760569E8210C63A700C00E24 /* IceCream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760569E7210C63A700C00E24 /* IceCream.swift */; };
+		760569EA210C65CC00C00E24 /* IceCreamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760569E9210C65CC00C00E24 /* IceCreamTableViewCell.swift */; };
 		76C684F9210664670030D53C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C684F8210664670030D53C /* AppDelegate.swift */; };
 		76C684FB210664670030D53C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C684FA210664670030D53C /* ViewController.swift */; };
 		76C684FE210664670030D53C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C684FC210664670030D53C /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		760569E7210C63A700C00E24 /* IceCream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCream.swift; sourceTree = "<group>"; };
+		760569E9210C65CC00C00E24 /* IceCreamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceCreamTableViewCell.swift; sourceTree = "<group>"; };
 		76C684F5210664670030D53C /* RotorTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RotorTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C684F8210664670030D53C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76C684FA210664670030D53C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 				76C684FF210664690030D53C /* Assets.xcassets */,
 				76C68501210664690030D53C /* LaunchScreen.storyboard */,
 				76C68504210664690030D53C /* Info.plist */,
+				760569E7210C63A700C00E24 /* IceCream.swift */,
+				760569E9210C65CC00C00E24 /* IceCreamTableViewCell.swift */,
 			);
 			path = RotorTests;
 			sourceTree = "<group>";
@@ -137,6 +143,8 @@
 			files = (
 				76C684FB210664670030D53C /* ViewController.swift in Sources */,
 				76C684F9210664670030D53C /* AppDelegate.swift in Sources */,
+				760569EA210C65CC00C00E24 /* IceCreamTableViewCell.swift in Sources */,
+				760569E8210C63A700C00E24 /* IceCream.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
