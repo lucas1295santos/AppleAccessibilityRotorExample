@@ -1,4 +1,5 @@
-##Custom Accessibility Rotor for iOS apps
+# Custom Accessibility Rotor for iOS apps
+
 In this article, I will teach how you, as a developer, how can you leverage Voice Over's power to improve your apps`s user experience for the blind and people with low vision, using the rotor.
 
 Voice Over is the native iOS screen reader for visually impaired users. And one of its coolest features that allows its users to navigate through the system and apps with ease, is the rotor.
@@ -102,7 +103,7 @@ At this point, you can test the app with Voice Over on, and your custom rotor sh
 
 This is a really simple example of custom rotor usage, but you can basically add any kind of business logic that makes sense for your application navigation, and make something really awesome!
 
-###References:
+### References:
 
 [My Medium post](https://medium.com/@lucas1295santos/custom-accessibility-rotor-for-ios-apps-eca5aeb1eaa0)
 
