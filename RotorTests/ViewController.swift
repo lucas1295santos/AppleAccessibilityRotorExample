@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         //Create a custor Rotor option, it has a name that will be read by voice over, and a action that is a
         //action called when this rotor option is interacted with.
         //The predicate gives you info about the state of this interaction
-        let propertyRotorOption = UIAccessibilityCustomRotor.init(name: "Filter distance") { (predicate) -> UIAccessibilityCustomRotorItemResult? in
+        let propertyRotorOption = UIAccessibilityCustomRotor.init(name: "Filter price") { (predicate) -> UIAccessibilityCustomRotorItemResult? in
             
             //Get the direction of the movement when this rotor option is enablade
             let forward = predicate.searchDirection == UIAccessibilityCustomRotorDirection.next
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
             
             self.filterIceCreamList()
             
-            self.rotorPropertyValueLabel.text = String(self.searchDistance)
+            self.rotorPropertyValueLabel.text = String(self.searchDistance) + "$"
             
             //Return the selection of voice over to the element rotorPropertyValueLabel
             //Use this return to select the desired selection that fills the purpose of its logic
@@ -149,7 +149,7 @@ extension ViewController: UITableViewDataSource {
         }
         
         iceCreamCell.flavorLabel.text = self.filteredIceCreamList[indexPath.row].flavor
-        iceCreamCell.distanceLabel.text = String(format: "%.2f", self.filteredIceCreamList[indexPath.row].distance) + "Km"
+        iceCreamCell.distanceLabel.text = String(format: "%.0f", self.filteredIceCreamList[indexPath.row].distance) + "$"
         
         return iceCreamCell
     }
