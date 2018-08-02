@@ -11,7 +11,7 @@ import UIKit
 class IceCreamTableViewCell: UITableViewCell {
 
     @IBOutlet weak var flavorLabel: UILabel!
-    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

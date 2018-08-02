@@ -10,5 +10,5 @@ import Foundation
 
 struct IceCream {
     var flavor: String
-    var distance: Double
+    var price: Double
 }

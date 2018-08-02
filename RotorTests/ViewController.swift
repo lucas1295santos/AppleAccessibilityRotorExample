@@ -28,16 +28,16 @@ class ViewController: UIViewController {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
-        let distanceRotor = self.setupDistanceRotor()
+        let priceRotor = self.setupPriceRotor()
         let chocolateRotor = self.setupChocolateRotor()
         
         //Add this rotor option to the iOS rotor, so the user can find it while in yor app
-        self.accessibilityCustomRotors = [distanceRotor, chocolateRotor]
+        self.accessibilityCustomRotors = [priceRotor, chocolateRotor]
         
         self.filterIceCreamList()
     }
     
-    private func setupDistanceRotor() -> UIAccessibilityCustomRotor {
+    private func setupPriceRotor() -> UIAccessibilityCustomRotor {
         
         //Create a custor Rotor option, it has a name that will be read by voice over, and a action that is a
         //action called when this rotor option is interacted with.
@@ -113,7 +113,7 @@ class ViewController: UIViewController {
     
     private func filterIceCreamList() {
         self.filteredIceCreamList = self.iceCreamList.filter { (iceCream) -> Bool in
-            return iceCream.distance <= Double(self.searchDistance)
+            return iceCream.price <= Double(self.searchDistance)
         }
         
         DispatchQueue.main.async {
@@ -123,11 +123,11 @@ class ViewController: UIViewController {
     
     /// Simple mockup table view setup
     private func setupTableviewData() {
-        self.iceCreamList.append(IceCream(flavor: "Strawberry", distance: 7))
-        self.iceCreamList.append(IceCream(flavor: "Crunchy Chocolate", distance: 3))
-        self.iceCreamList.append(IceCream(flavor: "Lemon", distance: 8))
-        self.iceCreamList.append(IceCream(flavor: "Chocolate and mint", distance: 2))
-        self.iceCreamList.append(IceCream(flavor: "Bacon", distance: 1))
+        self.iceCreamList.append(IceCream(flavor: "Strawberry", price: 7))
+        self.iceCreamList.append(IceCream(flavor: "Crunchy Chocolate", price: 3))
+        self.iceCreamList.append(IceCream(flavor: "Lemon", price: 8))
+        self.iceCreamList.append(IceCream(flavor: "Chocolate and mint", price: 2))
+        self.iceCreamList.append(IceCream(flavor: "Bacon", price: 1))
     }
 }
 
@@ -149,7 +149,7 @@ extension ViewController: UITableViewDataSource {
         }
         
         iceCreamCell.flavorLabel.text = self.filteredIceCreamList[indexPath.row].flavor
-        iceCreamCell.distanceLabel.text = String(format: "%.0f", self.filteredIceCreamList[indexPath.row].distance) + "$"
+        iceCreamCell.priceLabel.text = String(format: "%.0f", self.filteredIceCreamList[indexPath.row].price) + "$"
         
         return iceCreamCell
     }
