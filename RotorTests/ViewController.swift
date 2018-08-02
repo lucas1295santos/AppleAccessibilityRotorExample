@@ -74,7 +74,7 @@ class ViewController: UIViewController {
             let forward = predicate.searchDirection == UIAccessibilityCustomRotorDirection.next
             
             /// Prepare for starting the cell inspection botton to top or top to botton
-            var currentRow = forward ? -1 : self.iceCreamList.count
+            var currentRow = forward ? -1 : self.filteredIceCreamList.count
 
             /// Find the current element selected by Voice Over
             if let currentElement = predicate.currentItem.targetElement {
@@ -91,8 +91,8 @@ class ViewController: UIViewController {
             var searchRow = nextSearchRow(currentRow)
             
             /// Iterates through the cell finding elements that match the Chocolate filter
-            while searchRow >= 0 && searchRow < self.iceCreamList.count {
-                if self.iceCreamList[searchRow].flavor.contains("Chocolate") {
+            while searchRow >= 0 && searchRow < self.filteredIceCreamList.count {
+                if self.filteredIceCreamList[searchRow].flavor.contains("Chocolate") {
                     let indexPath = IndexPath(row: searchRow, section: 0)
                     self.tableView.scrollToRow(at: indexPath, at: .none, animated: false)
                     let cell = self.tableView.cellForRow(at: indexPath)!
